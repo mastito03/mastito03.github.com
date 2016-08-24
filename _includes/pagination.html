@@ -1,0 +1,16 @@
+<nav id="post-nav">
+    {% if paginator.previous_page %}
+        <span class="prev">
+            <a href="{{ site.baseurl }}{{ paginator.previous_page_path | remove_first: '/' }}">
+                <span class="arrow">←</span> Newer Posts
+            </a>
+        </span>
+    {% endif %}
+    {% if paginator.next_page %}
+        <span class="next">
+            <a href="{{ site.baseurl }}{{ paginator.next_page_path | remove_first: '/'}}">
+                Older Posts <span class="arrow">→</span>
+            </a>
+        </span>
+    {% endif %}
+</nav>

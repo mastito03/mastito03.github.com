@@ -1,0 +1,12 @@
+<nav class="main-nav">
+    {% if page.url != site.baseurl %}
+        <a href="{{ site.baseurl }}"> <span class="arrow">←</span> Home </a>
+    {% endif %}
+	{% for nav in site.data.nav %}
+		{% assign url = site.baseurl | append: nav.url %}
+		{% if page.url != url %}
+			<a href="{{ url }}">{{ nav.name }} </a>
+		{% endif %}
+	{% endfor %}
+    <a class="cta" href="{{ site.baseurl }}feed.xml">Subscribe</a>
+</nav>
