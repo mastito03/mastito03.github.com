@@ -21,26 +21,34 @@ authorTwitter:  #'YourTwitterUsername'
 
 permalink:       /:year/:title/
 
+collections:
+  playgrounds:
+    permalink: /playground/:title/
+
+
 defaults:
-    -
-        scope:
-            path: "" # empty string for all files
-            type: pages
-        values:
-            layout: default
-            footer: true
-    -
-        scope:
-            path: "" # empty string for all files
-            type: posts
-        values:
-            layout: post
-            footer: true
-            profile: false
-    -
-        scope:
-            path: ""
-            type: drafts
-        values:
-            layout: post
-            footer: true
+- scope:
+    path: "" # empty string for all files
+    type: pages
+  values:
+    layout: default
+    footer: true
+- scope:
+    path: "" # empty string for all files
+    type: posts
+  values:
+    layout: post
+    footer: true
+    profile: false
+- scope:
+    path: ""
+    type: drafts
+  values:
+    layout: post
+    footer: true
+- scope:
+    path: ""
+    type: playgrounds
+  values:
+    layout: default
+    footer: true
