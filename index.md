@@ -3,4 +3,10 @@ profile: true
 footer: false
 ---
 
-{% include post-list.html %}
+Hello.
+
+My name Arya.
+I am web programmer.
+
+I know **PHP** and **Ruby**
+
